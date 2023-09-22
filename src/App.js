@@ -9,7 +9,7 @@ import React from 'react';
 const defaultTodos = [
   { text: 'Cortar Manzanas', completed: true },
   { text: 'Cortar Platanos', completed: false },
-  { text: 'Cortar Duraznos', completed: true },
+  { text: 'Cortar Naranjas', completed: true },
 ]
 
 function App() {
