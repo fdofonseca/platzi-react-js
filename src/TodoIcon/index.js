@@ -1,5 +1,5 @@
-import { ReactComponent as CompleteSVG } from "./assets/complete-icon.svg";
-import { ReactComponent as DeleteSVG } from "./assets/delete-icon.svg";
+import { ReactComponent as CompleteSVG } from "../assets/complete-icon.svg";
+import { ReactComponent as DeleteSVG } from "../assets/delete-icon.svg";
 import './TodoIcon.css';
 
 const iconTypes = {
