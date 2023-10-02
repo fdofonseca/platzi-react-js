@@ -12,10 +12,11 @@ import { AppUI } from './AppUI'
 
 function App() {
 
-  const [todos, saveTodos] = useLocalStorage('todos_list', []);
+  const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('todos_list', []);
   const [searchValue, setSearchValue] = React.useState('');
   const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
+
   const searchedTodos = todos.filter(todo => {
     const todoText = todo.text.toLocaleLowerCase();
     const searchText = searchValue.toLocaleLowerCase();
@@ -44,6 +45,8 @@ function App() {
     searchedTodos={searchedTodos}
     completeTodo={completeTodo}
     deleteTodo={deleteTodo}
+    loading={loading}
+    error={error}
   />
 }
 
