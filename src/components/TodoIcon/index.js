@@ -1,6 +1,6 @@
-import { ReactComponent as CompleteSVG } from "../assets/complete-icon.svg";
-import { ReactComponent as DeleteSVG } from "../assets/delete-icon.svg";
-import './TodoIcon.css';
+import { ReactComponent as CompleteSVG } from "../../assets/complete-icon.svg";
+import { ReactComponent as DeleteSVG } from "../../assets/delete-icon.svg";
+import '../TodoIcon/TodoIcon.css';
 
 const iconTypes = {
     "check": (color) => <CompleteSVG className="Icon-svg" fill={color} />,

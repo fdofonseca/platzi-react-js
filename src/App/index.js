@@ -10,6 +10,8 @@ import { AppUI } from './AppUI'
 //  ]
 //  localStorage.setItem('todos_list', JSON.stringify(defaultTodos));
 
+// localStorage.removeItem('todos_list');
+
 function App() {
 
   const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('todos_list', []);
