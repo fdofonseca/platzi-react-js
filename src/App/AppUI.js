@@ -7,13 +7,22 @@ import { TodosLoading } from '../components/TodosLoading/index';
 import { TodosError } from '../components/TodosError/index';
 import { EmptyTodos } from '../components/EmptyTodos/index';
 import { CreateTodoButton } from '../components/CreateTodoButton/index';
+import { TodoContext } from '../TodoContext';
 
-function AppUI({ completedTodos, totalTodos, searchValue, setSearchValue, searchedTodos, completeTodo, deleteTodo, loading, error }) {
+function AppUI() {
+
+    const {
+        searchedTodos,
+        completeTodo,
+        deleteTodo,
+        loading,
+        error
+    } = React.useContext(TodoContext);
+
     return (
         <React.Fragment>
-            <TodoCounter completed={completedTodos} total={totalTodos} />
-            <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
-
+            <TodoCounter />
+            <TodoSearch />
             <TodoList>
                 {loading && <>
                     <TodosLoading />
@@ -23,10 +32,17 @@ function AppUI({ completedTodos, totalTodos, searchValue, setSearchValue, search
                 {error && <TodosError />}
                 {(!loading && searchedTodos.lenght === 0) && <EmptyTodos />}
                 {searchedTodos.map(todo => (
-                    <TodoItem text={todo.text} completed={todo.completed} key={todo.text} onComplete={() => completeTodo(todo.text)} onDelete={() => deleteTodo(todo.text)} />
+                    <TodoItem
+                        text={todo.text}
+                        completed={todo.completed}
+                        key={todo.text}
+                        onComplete={() =>
+                            completeTodo(todo.text)}
+                        onDelete={() =>
+                            deleteTodo(todo.text)}
+                    />
                 ))}
             </TodoList>
-
             <CreateTodoButton />
         </React.Fragment>
     );
