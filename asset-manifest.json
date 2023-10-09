@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/platzi-react-js/static/css/main.6c2b99b3.css",
+    "main.js": "/platzi-react-js/static/js/main.3b3699eb.js",
+    "index.html": "/platzi-react-js/index.html",
+    "static/media/delete-icon.svg": "/platzi-react-js/static/media/delete-icon.67697f56fd2f149bc9515a879062ad5c.svg",
+    "static/media/complete-icon.svg": "/platzi-react-js/static/media/complete-icon.23109d14544b9bb9b3d5d4e65ea13701.svg",
+    "main.6c2b99b3.css.map": "/platzi-react-js/static/css/main.6c2b99b3.css.map",
+    "main.3b3699eb.js.map": "/platzi-react-js/static/js/main.3b3699eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c2b99b3.css",
+    "static/js/main.3b3699eb.js"
+  ]
+}
